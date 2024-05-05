@@ -10,18 +10,43 @@
   <body>
     <header></header>
     <main id="page-main">
-      <h1 class="main-title">SONG LIST GENERATOR</h1>
-      <h2>ADD A SONG:</h2>
-      <form action="get" class="form">
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name" />
-        <label for="artist">Artist:</label>
-        <input type="text" name="artist" id="artist" />
-        <label for="runtime">Runtime:</label>
-        <input type="text" name="runtime" id="runtime" />
-        <button class="btn-add" type="submit">Add Song</button>
-      </form>
-      <h3 class="list-title">SONG LIST:</h3>
+      <section>
+        <h1 class="main-title">SONG LIST GENERATOR</h1>
+        <h2>ADD A SONG:</h2>
+        <form action="get" class="form">
+          <div class="name-div">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" />
+          </div>
+          <div class="artist-div">
+            <label for="artist">Artist:</label>
+            <input type="text" name="artist" id="artist" />
+          </div>
+          <div class="runtime-div">
+            <label for="runtime">Runtime:</label>
+            <div class="runtime-inputs">
+              <span>min:</span>
+              <input
+                type="text"
+                name="runtime"
+                id="runtime-min"
+                maxlength="2"
+              />
+              <span>sec:</span>
+              <input
+                type="text"
+                name="runtime"
+                id="runtime-sec"
+                maxlength="2"
+              />
+            </div>
+          </div>
+          <button class="btn-add" type="submit">ADD</button>
+        </form>
+      </section>
+      <section>
+        <h3 class="list-title">SONG LIST:</h3>
+      </section>
     </main>
     <footer></footer>
   </body>

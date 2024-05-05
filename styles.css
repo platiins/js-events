@@ -4,10 +4,149 @@ body {
   padding: 100px;
 }
 
-.main-title {
-  color: #457e59;
-  font-size: 50px;
+main {
+  display: flex;
+  gap: 50px;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
+
+section {
+  width: 50%;
+}
+
+p {
+  margin: 0;
+}
+
+.main-title,
+.list-title {
+  color: #283618;
+  font-size: 40px;
+  margin-top: 0;
+}
+
 .display-none {
   display: none;
+}
+
+.form {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  font-size: 22px;
+  width: 80%;
+}
+
+input {
+  outline: none;
+  background-color: inherit;
+  border: 2px solid #283618;
+  border-radius: 10px;
+  font-size: inherit;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0 5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+input:focus {
+  border: 2px solid #606c38;
+}
+
+.runtime-inputs {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.runtime-inputs span {
+  color: #272e27;
+  font-size: 18px;
+}
+
+.runtime {
+  color: #000000;
+  font-size: 18px;
+  padding-top: 10px;
+}
+
+.wrong-input {
+  border: 3px solid #69202f;
+}
+
+.error-msg {
+  font-size: 16px;
+  color: #69202f;
+  font-weight: 400;
+  display: block;
+}
+
+.btn-add {
+  width: 40%;
+  padding: 10px;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+  background-color: #283618;
+  text-align: center;
+  align-self: center;
+  outline: none;
+  margin-top: 20px;
+
+  border: 2px solid #283618;
+  border-radius: 10px;
+}
+
+.btn-add:hover,
+.btn-delete:hover {
+  background-color: #606c38;
+}
+
+.btn-delete {
+  width: 70px;
+  height: 40px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #283618;
+  text-align: center;
+  outline: none;
+
+  border: 2px solid #283618;
+  border-radius: 10px;
+}
+
+.ul {
+  font-size: 22px;
+  color: #272e27;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 40px;
+}
+
+.song-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  border: 2px solid #283618;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.song-container:hover {
+  border: 2px solid #606c38;
+}
+
+.bold {
+  font-weight: 700;
 }
