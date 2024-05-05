@@ -1,0 +1,13 @@
+body {
+  background-color: #a8b2a8;
+  font-family: "Gill Sans", sans-serif;
+  padding: 100px;
+}
+
+.main-title {
+  color: #457e59;
+  font-size: 50px;
+}
+.display-none {
+  display: none;
+}
