@@ -96,11 +96,13 @@ form.addEventListener("submit", (event) => {
     songRuntime.classList.add("display-none");
     songRuntime.classList.add("runtime");
 
-    const timeMin = runtimeMinInput.value;
-    const timeSec = runtimeSecInput.value;
+    const timeMin = +runtimeMinInput.value;
+    const timeSec = +runtimeSecInput.value;
 
-    if (!timeMin && !timeSec) {
+    if (timeMin === 0 && timeSec === 0) {
       songRuntime.textContent = "no runtime value provided";
+    } else if (isNaN(timeMin) || isNaN(timeSec)) {
+      songRuntime.textContent = "wrong value";
     } else {
       songRuntime.textContent = `song runtime: 00:${String(timeMin).padStart(
         2,
