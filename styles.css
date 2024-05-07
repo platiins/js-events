@@ -1,7 +1,7 @@
 body {
   background-color: #a8b2a8;
   font-family: "Gill Sans", sans-serif;
-  padding: 100px;
+  padding: 50px 100px;
 }
 
 main {
@@ -11,7 +11,7 @@ main {
   align-items: flex-start;
 }
 
-section {
+main section {
   width: 50%;
 }
 
@@ -70,7 +70,7 @@ input:focus {
   font-size: 18px;
 }
 
-.runtime {
+.runtime-value {
   color: #000000;
   font-size: 18px;
   padding-top: 10px;
@@ -123,7 +123,7 @@ input:focus {
   border-radius: 10px;
 }
 
-.ul {
+.songs-list {
   font-size: 22px;
   color: #272e27;
   font-weight: 400;

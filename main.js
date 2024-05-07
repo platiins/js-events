@@ -10,7 +10,7 @@ const addBtn = document.querySelector(".btn");
 const listTitle = document.querySelector(".list-title");
 
 const ul = document.createElement("ul");
-ul.classList.add("ul");
+ul.classList.add("songs-list");
 listTitle.append(ul);
 
 //error for missing inputs:
@@ -75,9 +75,18 @@ form.addEventListener("submit", (event) => {
     ul.append(songContainer);
 
     //displaying song name and artist as input results
-    const songDecription = document.createElement("p");
-    songDecription.textContent = `${naming} by ${artist}`;
+
+    const songDecription = document.createElement("div");
+    songDecription.textContent = ` by ${artist}`;
     songContainer.append(songDecription);
+
+    // creating name input value as html element to add styling
+
+    const namingSpan = document.createElement("span");
+    namingSpan.textContent = `${naming}`;
+    namingSpan.classList.add("bold");
+
+    songDecription.prepend(namingSpan);
 
     // adding delete btn and remove event
 
@@ -94,15 +103,15 @@ form.addEventListener("submit", (event) => {
     const songRuntime = document.createElement("p");
     songDecription.append(songRuntime);
     songRuntime.classList.add("display-none");
-    songRuntime.classList.add("runtime");
+    songRuntime.classList.add("runtime-value");
 
     const timeMin = +runtimeMinInput.value;
     const timeSec = +runtimeSecInput.value;
 
     if (timeMin === 0 && timeSec === 0) {
-      songRuntime.textContent = "no runtime value provided";
+      songRuntime.textContent = "no runtime provided";
     } else if (isNaN(timeMin) || isNaN(timeSec)) {
-      songRuntime.textContent = "wrong value";
+      songRuntime.textContent = "wrong value provided";
     } else {
       songRuntime.textContent = `song runtime: 00:${String(timeMin).padStart(
         2,
@@ -117,9 +126,3 @@ form.addEventListener("submit", (event) => {
     form.reset();
   }
 });
-
-//issues:
-
-// const naming - unable to add class to make font bold as is input value
-
-// runtime validation??? how to check if is a number
